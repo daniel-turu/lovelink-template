@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './style.css'; // Make sure this path is correct for where your CSS file is located
 import { SqureHvImage } from '../../Components/SqureHvImage';
-import { getBgColor } from '../../Utiles';
+import { useColors } from '../../Components/ColorRoute';
 
 interface LoveStoryDialogProps { story: string; img: string }
 
 export const LoveStoryDialog: React.FC<LoveStoryDialogProps> = ({story, img}) => {
     const [isDialogOpen, setIsDialogOpen] = useState(false);
+    const { bgColor } = useColors();
 
     const openDialog = () => {
         setIsDialogOpen(true);
@@ -22,7 +23,7 @@ export const LoveStoryDialog: React.FC<LoveStoryDialogProps> = ({story, img}) =>
                 data-ripple-light="true"
                 onClick={openDialog}
                 className="select-none rounded-lg bg-gradient-to-tr italic underline py-3 px-6 text-center align-middle font-sans text-xs font-bold  shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                style={{ color: getBgColor() }}
+                style={{ color: bgColor }}
 
             >
                 Read More
@@ -52,7 +53,7 @@ export const LoveStoryDialog: React.FC<LoveStoryDialogProps> = ({story, img}) =>
                                 data-ripple-dark="true"
                                 onClick={closeDialog}
                                 className="px-6 py-3 mr-1 font-sans text-xs font-bold uppercase transition-all rounded-lg middle none center hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                                style={{ color: getBgColor() }}
+                                style={{ color: bgColor }}
                             >
                                 Close
                             </button>

@@ -2,15 +2,17 @@ import React, { useCallback } from 'react';
 import Particles from 'react-particles';
 import { loadSlim } from 'tsparticles-slim';
 import type { Engine, Container } from 'tsparticles-engine';
-import { getBgColor } from '../../Utiles';
+import { useColors } from '../../Components/ColorRoute';
 
 const MyParticles: React.FC = () => {
+    const { bgColor } = useColors();
+
     const particlesInit = useCallback(async (engine: Engine) => {
         await loadSlim(engine);
     }, []);
 
     const particlesLoaded = useCallback(async (container: Container | undefined) => {
-        console.log(container);
+        // console.log(container);
     }, []);
 
     return (
@@ -30,13 +32,13 @@ const MyParticles: React.FC = () => {
                         },
                     },
                     color: {
-                        value: getBgColor(),
+                        value: bgColor,
                     },
                     shape: {
                         type: 'circle',
                         stroke: {
                             width: 0,
-                            color:  getBgColor(),
+                            color:  bgColor,
                         },
                         polygon: {
                             nb_sides: 5,
@@ -65,7 +67,7 @@ const MyParticles: React.FC = () => {
                     links: {
                         enable: true,
                         distance: 150,
-                        color:  getBgColor(),
+                        color:  bgColor,
                         opacity: 0.4,
                         width: 1,
                     },

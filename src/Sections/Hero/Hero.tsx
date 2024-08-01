@@ -1,13 +1,16 @@
 import "./style.css";
 import { transparentize } from 'polished';
-import { formatDate, getBgColor } from '../../Utiles';
+import { formatDate} from '../../Utiles';
 import MyParticles from './MyParticles';
 import { getCouples } from "../../CouplesData";
+import { useColors } from "../../Components/ColorRoute";
 
 export const Hero = () => {
     const Couples = getCouples()
-    const transparentColor = transparentize(0.6, getBgColor()); // 60% transparent
-    const transBgC50 = transparentize(0.5, getBgColor()); // 50% transparent
+    const { bgColor } = useColors();
+
+    const transparentColor = transparentize(0.6, bgColor); // 60% transparent
+    const transBgC50 = transparentize(0.5, bgColor); // 50% transparent
 
     const bg = Couples.couplesImageTog1
     const date = formatDate(Couples.weddingDate)
@@ -23,7 +26,7 @@ export const Hero = () => {
                     <div className="absolute inset-10 border rounded-full animate-ping"
                         style={{
                             backgroundColor: transparentColor,
-                            background: `radial-gradient(circle, ${transBgC50} 0%, ${transBgC50} 60%,${getBgColor()} 100%)`
+                            background: `radial-gradient(circle, ${transBgC50} 0%, ${transBgC50} 60%,${bgColor} 100%)`
                         }}>
                     </div>
 

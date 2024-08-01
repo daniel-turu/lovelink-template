@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { getBgColor, getTextColor } from '../../Utiles';
 import { transparentize } from 'polished';
 import { getCouples } from '../../CouplesData';
+import { useColors } from '../../Components/ColorRoute';
 
 
 interface TimeLeft {
@@ -13,6 +13,8 @@ interface TimeLeft {
 
 export const CountDown = () => {
     const couples = getCouples()
+    const { bgColor, textColor } = useColors();
+
 
     const weddingDate = new Date(couples.weddingDate);
     const now = new Date();
@@ -76,14 +78,14 @@ export const CountDown = () => {
     };
 
 
-    const transBgC50 = transparentize(0.5, getBgColor()); // 50% transparent
+    const transBgC50 = transparentize(0.5, bgColor); // 50% transparent
 
     return (
         <div className='flex flex-col items-center'>
             <div
                 className="container text-center pb-[36px] font-serif bg-fixed bg-cover bg-center relative"
                 style={{
-                    color: getTextColor(),
+                    color: textColor,
                     backgroundImage: `url(${couples.couplesImageTog2})`,
                 }}
             >
@@ -96,7 +98,7 @@ export const CountDown = () => {
                         {now > weddingDate ? (
                             <div
                                 className='w-full m-5 flex flex-col justify-center'
-                                style={{ backgroundColor: transBgC50, color: getTextColor() }}
+                                style={{ backgroundColor: transBgC50, color: textColor }}
                             >
                                 <span className='text-5xl'>{weddingDate.toDateString()} <br /> {weddingDate.toLocaleTimeString()}</span>
                             </div>

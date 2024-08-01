@@ -5,8 +5,8 @@ import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
 import lgFullscreen from 'lightgallery/plugins/fullscreen';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
-import { transparentize } from 'polished';
-import { getBgColor } from '../Utiles';
+// import { transparentize } from 'polished';
+// import { useColors } from '../Utiles';
 import { getCouples } from '../CouplesData';
 
 const MyGallery = () => {
@@ -14,7 +14,7 @@ const MyGallery = () => {
   const gellery = couples.gallery || []
 
 
-  const transparentColor = transparentize(0.6, getBgColor()); // 60% transparent
+  // const transparentColor = transparentize(0.6, useBgColor()); // 60% transparent
 
   const onInit = () => {
     console.log('lightGallery has been initialized');

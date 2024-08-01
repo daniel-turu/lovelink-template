@@ -1,8 +1,12 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const dotenv = require('dotenv');
 
-const allowedDomains = ['example.com', 'anotherdomain.com', 'localhost', '127.0.0.1'];
+
+dotenv.config();
+
+const allowedDomains = process.env.ALLOWED_DOMAINS ? process.env.ALLOWED_DOMAINS.split(',') : [];
 
 app.use((req, res, next) => {
   const referer = req.get('Referer') || '';

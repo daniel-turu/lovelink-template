@@ -1,5 +1,5 @@
 import React from 'react';
-import { getBgColor } from '../Utiles';
+import { useColors } from './ColorRoute';
 
 interface RoundImageProps {
   cicle_wh: number;
@@ -7,6 +7,8 @@ interface RoundImageProps {
 }
 
 export const RoundImage: React.FC<RoundImageProps> = ({ cicle_wh, backgroundImageUrl }) => {
+  const { bgColor } = useColors();
+
   return (
     <div
       className="rounded-full border-2 transition-transform duration-300 ease-in-out transform hover:scale-110 active:scale-125 mx-2"
@@ -16,7 +18,7 @@ export const RoundImage: React.FC<RoundImageProps> = ({ cicle_wh, backgroundImag
         backgroundImage: `url('${backgroundImageUrl}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        borderColor: getBgColor()
+        borderColor: bgColor
       }}
     >
     </div>

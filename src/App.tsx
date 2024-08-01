@@ -1,31 +1,24 @@
 import React from 'react';
-import { Hero } from './Sections/Hero/Hero';
-import { Nav } from './Sections/Nav/Nav';
-import { Couples } from './Sections/Couples-with-Love-Story/Couples';
-import { CountDown } from './Sections/CountDownTime/CountDown';
-import { Location } from './Sections/Location/Location';
-import { BridesMaid } from './Sections/BridesMaid/BridesMaid';
-import { GroomsMen } from './Sections/GroomsMen/GroomsMen';
-import { WeddingGallery } from './Sections/WeddingGallery/WeddingGallery';
-import { Footer } from './Sections/Footer/Footer';
-import { WFooter } from './Components/WaterMark/WFooter';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Template1 from './Templates/template1';
+import { ColorProvider } from './Components/ColorRoute';
+import Template2 from './Templates/template2';
+
 
 function App() {
 
-  return (
-    <div className="">
-      <Nav />
-      <Hero />
-      <Couples />
-      <CountDown />
-      <Location />
-      <BridesMaid />
-      <GroomsMen />
-      <WeddingGallery />
-      <Footer />
-      <WFooter />
+  // Note the path must be the same with LovelinkTempInfo.ts >> lovelinkTemp && tempName
 
-    </div>
+  return (
+    <Router>
+      <ColorProvider>
+        <Routes>
+          <Route path="/template1" element={<Template1 />} />
+          <Route path="/couplesdream" element={<Template2 />} />
+        </Routes>
+      </ColorProvider>
+    </Router>
+
   );
 }
 

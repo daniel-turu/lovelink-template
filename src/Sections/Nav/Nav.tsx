@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import { MdClose, MdMenuOpen } from 'react-icons/md';
-import { getBgColor, getTextColor } from '../../Utiles';
 import { getCouples } from '../../CouplesData';
+import { useColors } from '../../Components/ColorRoute';
 
 export const Nav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
+    const { bgColor,textColor } = useColors();
 
     const couples = getCouples();
 
@@ -33,7 +34,6 @@ export const Nav = () => {
         } else {
             document.removeEventListener('mousedown', handleClickOutside);
         }
-
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
@@ -42,7 +42,7 @@ export const Nav = () => {
     return (
         <div className='flex flex-col items-center '>
             <div className='container flex h-14 bg-white justify-center items-center border-b'
-                style={{ borderColor: getBgColor() }}
+                style={{ borderColor: bgColor }}
             >
                 <div className='flex-1 h-full flex items-center'>
                     <div className='ml-6 font-mistletoe text-xl font-bold tracking-wider'>
@@ -53,9 +53,9 @@ export const Nav = () => {
                     <button
                         onClick={toggleMenu}
                         className='w-10 h-10 ml-6 rounded-tl-lg rounded-br-lg flex justify-center items-center'
-                        style={{ backgroundColor: getBgColor() }}
+                        style={{ backgroundColor: bgColor }}
                     >
-                        <MdMenuOpen size={30} color={getTextColor()} />
+                        <MdMenuOpen size={30} color={textColor} />
                     </button>
                 </div>
             </div>
@@ -67,52 +67,52 @@ export const Nav = () => {
                 <div className='pt-4 '>
                     <button onClick={toggleMenu}
                         className='float-right w-8 h-8 mr-4 rounded-tl-lg rounded-br-lg flex justify-center items-center'
-                        style={{ backgroundColor: getBgColor() }}
+                        style={{ backgroundColor: bgColor }}
                     >
-                        <MdClose size={26} color={getTextColor()} />
+                        <MdClose size={26} color={textColor} />
                     </button>
 
                     <h2 className='font-bold pl-4 text-lg pt-2 border-b border-[#85aaba]'
-                        style={{ borderColor: getBgColor() }}>
+                        style={{ borderColor: bgColor }}>
                         Home
                     </h2>
                     <ul className='mt-4'>
                         <li className='mb-2 pl-4 border-b'
-                            style={{ borderColor: getBgColor() }}>
+                            style={{ borderColor: bgColor }}>
                             <button
                                 onClick={() => scrollToSection('couple-story')}
                                 className=''
-                                style={{ color: getBgColor() }}
+                                style={{ color: bgColor }}
                             >
                                 Couple Story
                             </button>
                         </li>
                         <li className='mb-2 pl-4 border-b'
-                            style={{ borderColor: getBgColor() }}>
+                            style={{ borderColor: bgColor }}>
                             <button
                                 onClick={() => scrollToSection('events')}
                                 className=''
-                                style={{ color: getBgColor() }}
+                                style={{ color: bgColor }}
                             >
                                 Events
                             </button>
                         </li>
                         <li className='mb-2 pl-4 border-b'
-                            style={{ borderColor: getBgColor() }}>
+                            style={{ borderColor: bgColor }}>
                             <button
                                 onClick={() => scrollToSection('fiends')}
                                 className=''
-                                style={{ color: getBgColor() }}
+                                style={{ color: bgColor }}
                             >
                                 People
                             </button>
                         </li>
                         <li className='mb-2 pl-4 border-b'
-                            style={{ borderColor: getBgColor() }}>
+                            style={{ borderColor: bgColor }}>
                             <button
                                 onClick={() => scrollToSection('gallery')}
                                 className=''
-                                style={{ color: getBgColor() }}
+                                style={{ color: bgColor }}
                             >
                                 Gallery
                             </button>

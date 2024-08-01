@@ -1,17 +1,19 @@
 import React from 'react'
-import { getBgColor, getTextColor } from '../../Utiles'
 import { transparentize } from 'polished';
 import { getCouples } from '../../CouplesData';
+import { useColors } from '../../Components/ColorRoute';
 
 export const Footer = () => {
   const couples = getCouples();
+  const { bgColor,textColor } = useColors();
 
-    const transparentColor = transparentize(0.6, getBgColor()); // 60% transparent
-    const transBgC50 = transparentize(0.5, getBgColor()); // 50% transparent
+
+    const transparentColor = transparentize(0.6, bgColor); // 60% transparent
+    const transBgC50 = transparentize(0.5, bgColor); // 50% transparent
 
     return (
         <div className='flex flex-col items-center  bg-cover bg-center relative'
-            style={{ color: getTextColor(), backgroundImage: `url(${couples.couplesImageTog3}` }}
+            style={{ color: textColor, backgroundImage: `url(${couples.couplesImageTog3}` }}
         >
             <div className="absolute w-full h-full z-10 bg-black opacity-50"></div>
 
@@ -23,7 +25,7 @@ export const Footer = () => {
                         <div className="absolute inset-10 border rounded-full animate-ping"
                             style={{
                                 backgroundColor: transparentColor,
-                                background: `radial-gradient(circle, ${transBgC50} 0%, ${transBgC50} 60%,${getBgColor()} 100%)`
+                                background: `radial-gradient(circle, ${transBgC50} 0%, ${transBgC50} 60%,${bgColor} 100%)`
                             }}>
                         </div>
 
