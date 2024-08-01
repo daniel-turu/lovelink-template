@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Hero } from './Sections/Hero/Hero';
+import { Nav } from './Sections/Nav/Nav';
+import { Couples } from './Sections/Couples-with-Love-Story/Couples';
+import { CountDown } from './Sections/CountDownTime/CountDown';
+import { Location } from './Sections/Location/Location';
+import { BridesMaid } from './Sections/BridesMaid/BridesMaid';
+import { GroomsMen } from './Sections/GroomsMen/GroomsMen';
+import { WeddingGallery } from './Sections/WeddingGallery/WeddingGallery';
+import { Footer } from './Sections/Footer/Footer';
+import { WFooter } from './Components/WaterMark/WFooter';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <Nav />
+      <Hero />
+      <Couples />
+      <CountDown />
+      <Location />
+      <BridesMaid />
+      <GroomsMen />
+      <WeddingGallery />
+      <Footer />
+      <WFooter />
+
     </div>
   );
 }
