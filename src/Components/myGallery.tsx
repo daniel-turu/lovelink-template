@@ -17,12 +17,12 @@ const MyGallery = () => {
   // const transparentColor = transparentize(0.6, useBgColor()); // 60% transparent
 
   const onInit = () => {
-    console.log('lightGallery has been initialized');
+    // console.log('lightGallery has been initialized');
   };
 
   const onBeforeSlide = (detail: { index: any; prevIndex: any; }) => {
     const { index, prevIndex } = detail;
-    console.log(index, prevIndex);
+    // console.log(index, prevIndex);
   };
 
   const [category, setCategory] = useState<string>('All');
