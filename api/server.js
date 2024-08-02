@@ -1,12 +1,12 @@
 const express = require('express');
 const path = require('path');
-const app = express();
 const dotenv = require('dotenv');
-
 
 dotenv.config();
 
 const allowedDomains = process.env.ALLOWED_DOMAINS ? process.env.ALLOWED_DOMAINS.split(',') : [];
+
+const app = express();
 
 app.use((req, res, next) => {
   const referer = req.get('Referer') || '';
@@ -41,6 +41,6 @@ app.get('*', (req, res) => {
 });
 
 const port = process.env.PORT || 3003;
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+app.listen(port, () => { console.log(`Server running on port ${port}`)});
+
+module.exports = app;
