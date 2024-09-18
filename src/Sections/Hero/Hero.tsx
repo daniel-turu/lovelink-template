@@ -2,11 +2,11 @@ import "./style.css";
 import { transparentize } from 'polished';
 import { formatDate} from '../../Utiles';
 import MyParticles from './MyParticles';
-import { getCouples } from "../../CouplesData";
 import { useColors } from "../../Components/ColorRoute";
+import { useCouples } from "../../Components/CouplesProvider";
 
 export const Hero = () => {
-    const Couples = getCouples()
+    const Couples = useCouples()
     const { bgColor } = useColors();
 
     const transparentColor = transparentize(0.6, bgColor); // 60% transparent

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Template1 from './Templates/template1';
 import { ColorProvider } from './Components/ColorRoute';
 import Template2 from './Templates/template2';
+import { CouplesProvider } from './Components/CouplesProvider';
 
 
 function App() {
@@ -11,12 +12,14 @@ function App() {
 
   return (
     <Router>
-      <ColorProvider>
-        <Routes>
-          <Route path="/template1" element={<Template1 />} />
-          <Route path="/couplesdream" element={<Template2 />} />
-        </Routes>
-      </ColorProvider>
+      <CouplesProvider>
+        <ColorProvider>
+          <Routes>
+            <Route path="/template1" element={<Template1 />} />
+            <Route path="/couplesdream" element={<Template2 />} />
+          </Routes>
+        </ColorProvider>
+      </CouplesProvider>
     </Router>
 
   );

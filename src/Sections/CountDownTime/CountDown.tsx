@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { transparentize } from 'polished';
-import { getCouples } from '../../CouplesData';
 import { useColors } from '../../Components/ColorRoute';
+import { useCouples } from '../../Components/CouplesProvider';
 
 
 interface TimeLeft {
@@ -12,7 +12,7 @@ interface TimeLeft {
 }
 
 export const CountDown = () => {
-    const couples = getCouples()
+    const couples = useCouples()
     const { bgColor, textColor } = useColors();
 
 

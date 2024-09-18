@@ -2,13 +2,14 @@ import { useState, useEffect, useRef } from 'react';
 import { MdClose, MdMenuOpen } from 'react-icons/md';
 import { getCouples } from '../../CouplesData';
 import { useColors } from '../../Components/ColorRoute';
+import { useCouples } from '../../Components/CouplesProvider';
 
 export const Nav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
     const { bgColor,textColor } = useColors();
 
-    const couples = getCouples();
+    const couples = useCouples();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);

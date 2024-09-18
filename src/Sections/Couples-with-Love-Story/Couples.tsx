@@ -1,5 +1,5 @@
+import { useCouples } from '../../Components/CouplesProvider'
 import { RoundImage } from '../../Components/RoundImage'
-import { getCouples } from '../../CouplesData'
 import { truncateText } from '../../Utiles'
 import { LoveStoryDialog } from './LoveStoryDialog'
 
@@ -7,7 +7,7 @@ import { LoveStoryDialog } from './LoveStoryDialog'
 
 
 export const Couples = () => {
-    const couples = getCouples()
+    const couples = useCouples()
 
 
     return (
@@ -28,7 +28,7 @@ export const Couples = () => {
                             <p className='text-center w-4/5'>
                                 {truncateText(couples.brideLoveStory, 328)}
                                 <br />
-                                <LoveStoryDialog story={couples.brideLoveStory} img={'/images/couples/18.png'} />
+                                <LoveStoryDialog story={couples.brideLoveStory} img={couples.brideImage} />
                             </p> : ""
                         }
 

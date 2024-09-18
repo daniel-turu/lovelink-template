@@ -7,10 +7,10 @@ import lgFullscreen from 'lightgallery/plugins/fullscreen';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 // import { transparentize } from 'polished';
 // import { useColors } from '../Utiles';
-import { getCouples } from '../CouplesData';
+import { useCouples } from './CouplesProvider';
 
 const MyGallery = () => {
-  const couples = getCouples();
+  const couples = useCouples();
   const gellery = couples.gallery || []
 
 
@@ -31,6 +31,11 @@ const MyGallery = () => {
   // Filter images based on the selected category
   const filteredImages = category === 'All' ? gellery : gellery.filter(image => image.category === category);
 
+
+  // If the gellery array is empty, return nothing (null)
+  if (gellery.length === 0) {
+    return null;
+  }
   return (
 
     <div className=''>

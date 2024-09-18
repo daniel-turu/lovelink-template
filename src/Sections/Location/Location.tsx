@@ -1,13 +1,16 @@
 import React from 'react'
-import { getCouples } from '../../CouplesData'
 import { useColors } from '../../Components/ColorRoute';
+import { useCouples } from '../../Components/CouplesProvider';
 
 export const Location = () => {
-    const couples = getCouples();
+    const couples = useCouples();
     const celebrations = couples.celebration || []; // Ensure celebration is defined and is an array
     const { bgColor, textColor } = useColors();
 
-
+    // If the celebrations array is empty, return nothing (null)
+    if (celebrations.length === 0) {
+        return null;
+    }
     return (
         <div className='flex flex-col items-center font-serif' id='events'>
             <div className='container my-10'>

@@ -1,10 +1,10 @@
 import React from 'react'
 import { transparentize } from 'polished';
-import { getCouples } from '../../CouplesData';
 import { useColors } from '../../Components/ColorRoute';
+import { useCouples } from '../../Components/CouplesProvider';
 
 export const Footer = () => {
-  const couples = getCouples();
+  const couples = useCouples();
   const { bgColor,textColor } = useColors();
 
 

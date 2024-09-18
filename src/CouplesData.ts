@@ -1,3 +1,4 @@
+
 export type Color = {
     TextColor?: string;
     BgColor?: string;
@@ -9,7 +10,7 @@ export type Celebration = {
 export type Friends = {
     name?: string;
     role?: string;
-    imageUrl?: string;
+    image?: string;
 };
 
 export type Images = {
@@ -53,6 +54,7 @@ export const getCouples = (): Couplesdata => {
         weddingColor: { BgColor:"#85aaba", TextColor:"#ffffff"},
         brideName: "Emily",
         brideFullname: "Emily Davis Ogunleye",
+
         brideLoveStoryTilte: "A Café Connection ☕❤️",
         brideLoveStory: "It all started in a cozy café in Lagos. One rainy afternoon, I ducked into the café to escape the downpour 🌧️. As I sat down with my coffee, I noticed a man reading a book at the table next to mine. He looked up and smiled at me, his eyes warm and inviting 😊. That was Kelechi. We struck up a conversation about the book he was reading, and it turned out we had similar tastes in literature 📚. The rain outside created a perfect backdrop for our conversation, and time flew by as we shared stories and laughed together 😂. A week later, Kelechi invited me to a book reading event 📖. As we listened to the author speak, I felt a deep connection forming between us. His kindness and intelligence drew me in, and I realized I wanted to know him better. Our coffee dates became a regular thing ☕. Each meeting brought us closer, and Kelechi's genuine nature made me fall for him more each day. One evening, as we walked through a park 🌳, he held my hand and confessed his feelings. My heart soared, and I knew I felt the same way 💓. From that moment on, our relationship blossomed like a beautiful flower 🌸. Kelechi's love and support became my anchor, and I couldn't imagine my life without him. With every shared moment, our bond grew stronger, and I look forward to a lifetime of love and happiness with him by my side 🌟.",
         brideImage: "/images/couples/18.png",
@@ -72,52 +74,54 @@ export const getCouples = (): Couplesdata => {
             { type: "Wedding Ceremony", address: "Saturday, 17th December, 2022, 10.00 AM ECWA Goodnews Church U/K, Television, Kaduna" },
             { type: "Reception Party", address: "Saturday, 17th December, 2022, 10.00 AM Time: Immediately after [Ceremony] ECWA Goodnews Church U/K, Television, Kaduna" }
         ],
+
         bridesMaid: [
-            { name: 'Judith Godiya', role: 'little bride', imageUrl: '/images/maid/1.jpg' },
-            { name: 'Jane Doe', role: 'maid of honor', imageUrl: '/images/maid/2.jpg' },
-            { name: 'Mary Johnson', role: 'bridesmaid', imageUrl: '/images/maid/3.jpg' },
-            { name: 'Emily Davis', role: 'bridesmaid', imageUrl: '/images/maid/4.jpg' },
-            { name: 'Sophia Brown', role: 'bridesmaid', imageUrl: '/images/maid/5.jpg' },
-            { name: 'Olivia Wilson', role: 'bridesmaid', imageUrl: '/images/maid/6.jpg' },
-            { name: 'Bimpe Adebayo', role: 'bridesmaid', imageUrl: '/images/maid/10.jpg' },
-            { name: 'Zainab Mohammed', role: 'bridesmaid', imageUrl: '/images/maid/16.jpg' },
-            { name: 'Amaka Nwosu', role: 'bridesmaid', imageUrl: '/images/maid/17.jpg' },
-            { name: 'Folake Adeyemi', role: 'bridesmaid', imageUrl: '/images/maid/19.jpg' },
-            { name: 'Bola Salami', role: 'bridesmaid', imageUrl: '/images/maid/20.jpg' },
-            { name: 'Titilayo Ogunleye', role: 'bridesmaid', imageUrl: '/images/maid/21.jpg' },
+            { name: 'Judith Godiya', role: 'little bride', image: '/images/maid/1.jpg' },
+            { name: 'Jane Doe', role: 'maid of honor', image: '/images/maid/2.jpg' },
+            { name: 'Mary Johnson', role: 'bridesmaid', image: '/images/maid/3.jpg' },
+            { name: 'Emily Davis', role: 'bridesmaid', image: '/images/maid/4.jpg' },
+            { name: 'Sophia Brown', role: 'bridesmaid', image: '/images/maid/5.jpg' },
+            { name: 'Olivia Wilson', role: 'bridesmaid', image: '/images/maid/6.jpg' },
+            { name: 'Bimpe Adebayo', role: 'bridesmaid', image: '/images/maid/10.jpg' },
+            { name: 'Zainab Mohammed', role: 'bridesmaid', image: '/images/maid/16.jpg' },
+            { name: 'Amaka Nwosu', role: 'bridesmaid', image: '/images/maid/17.jpg' },
+            { name: 'Folake Adeyemi', role: 'bridesmaid', image: '/images/maid/19.jpg' },
+            { name: 'Bola Salami', role: 'bridesmaid', image: '/images/maid/20.jpg' },
+            { name: 'Titilayo Ogunleye', role: 'bridesmaid', image: '/images/maid/21.jpg' },
         ],
+
         groomsMen: [
-            { name: 'Michael Williams', role: 'groomsman', imageUrl: '/images/groomsmen/4.jpg' },
-            { name: 'James Okeke', role: 'best man', imageUrl: '/images/groomsmen/1.jpg' },
-            { name: 'David Johnson', role: 'groomsman', imageUrl: '/images/groomsmen/3.jpg' },
-            { name: 'Peter Brown', role: 'groomsman', imageUrl: '/images/groomsmen/5.jpg' },
-            { name: 'Samuel Wilson', role: 'groomsman', imageUrl: '/images/groomsmen/6.jpg' },
-            { name: 'Chidi Nwosu', role: 'groomsman', imageUrl: '/images/groomsmen/7.jpg' },
-            { name: 'Emeka Okafor', role: 'groomsman', imageUrl: '/images/groomsmen/8.jpg' },
-            { name: 'Ibrahim Musa', role: 'groomsman', imageUrl: '/images/groomsmen/9.jpg' },
-            { name: 'Uche Eze', role: 'groomsman', imageUrl: '/images/groomsmen/10.jpg' },
-            { name: 'Tunde Adebayo', role: 'groomsman', imageUrl: '/images/groomsmen/11.jpg' },
-            { name: 'Kelechi Obi', role: 'groomsman', imageUrl: '/images/groomsmen/12.jpg' },
-            { name: 'Bayo Adigun', role: 'groomsman', imageUrl: '/images/groomsmen/13.jpg' },
+            { name: 'Michael Williams', role: 'groomsman', image: '/images/groomsmen/4.jpg' },
+            { name: 'James Okeke', role: 'best man', image: '/images/groomsmen/1.jpg' },
+            { name: 'David Johnson', role: 'groomsman', image: '/images/groomsmen/3.jpg' },
+            { name: 'Peter Brown', role: 'groomsman', image: '/images/groomsmen/5.jpg' },
+            { name: 'Samuel Wilson', role: 'groomsman', image: '/images/groomsmen/6.jpg' },
+            { name: 'Chidi Nwosu', role: 'groomsman', image: '/images/groomsmen/7.jpg' },
+            { name: 'Emeka Okafor', role: 'groomsman', image: '/images/groomsmen/8.jpg' },
+            { name: 'Ibrahim Musa', role: 'groomsman', image: '/images/groomsmen/9.jpg' },
+            { name: 'Uche Eze', role: 'groomsman', image: '/images/groomsmen/10.jpg' },
+            { name: 'Tunde Adebayo', role: 'groomsman', image: '/images/groomsmen/11.jpg' },
+            { name: 'Kelechi Obi', role: 'groomsman', image: '/images/groomsmen/12.jpg' },
+            { name: 'Bayo Adigun', role: 'groomsman', image: '/images/groomsmen/13.jpg' },
         ],
 
         gallery:[
             {
               src: '/images/couples/1.jpg',
               thumb: '/images/couples/1.jpg',
-              subHtml: "<h4>Photo by - <a href='https://unsplash.com/@entrycube'>Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>",
+              subHtml: "<h4>Diego Guzmán </h4> <p> Location </p>",
               category: 'Engagement'
             },
             {
               src: '/images/couples/2.jpg',
               thumb: '/images/couples/2.jpg',
-              subHtml: "<h4>Photo by - <a href='https://unsplash.com/@asoshiation'>Shah </a></h4><p> Location - <a href='https://unsplash.com/s/photos/shinimamiya%2C-osaka%2C-japan'>Shinimamiya, Osaka, Japan</a></p>",
+              subHtml: "<h4- Shah </h4><p> Location - Shinimamiya, Osaka, Japan</p>",
               category: 'Engagement'
             },
             {
               src: '/images/couples/3.jpg',
               thumb: '/images/couples/3.jpg',
-              subHtml: "<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11'>Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>",
+              subHtml: "<h4>Katherine Gu </h4><p> For all those years we were alone and helpless.</p>",
               category: 'Engagement'
             },
             {
@@ -213,6 +217,81 @@ export const getCouples = (): Couplesdata => {
           ]
 
     };
+
+
+
+};
+
+
+
+
+
+export const getEmptyCouples = (): Couplesdata => {
+  return {
+      weddingColor: { BgColor:"", TextColor:""},
+      brideName: "",
+      brideFullname: "",
+
+      brideLoveStoryTilte: "",
+      brideLoveStory: "",
+      brideImage: "",
+
+      groomName: "",
+      groomFullname: "",
+      groomLoveStoryTilte: "",
+      groomLoveStory: "",
+      groomImage: "",
+
+      weddingDate: "",
+      couplesImageTog1: "",
+      couplesImageTog2: "",
+      couplesImageTog3: "",
+
+      celebration: [
+          { type: "", address: "" },
+          { type: "", address: "" }
+      ],
+
+      bridesMaid: [
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+      ],
+
+      groomsMen: [
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+          { name: '', role: '', image: '' },
+      ],
+
+      gallery:[
+          {
+            src: '',
+            thumb: '',
+            subHtml: "",
+            category: ''
+          }
+        ]
+
+  };
 
 
 
