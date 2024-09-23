@@ -1,5 +1,4 @@
 // utils/colors.ts
-const backendDomain = process.env.REACT_APP_BACKEND_DOMAIN
 
 
 export type Color = string;
@@ -50,10 +49,11 @@ export const truncateText = (text: string, maxLength: number) => {
 
 
 
+const backendDomain = process.env.REACT_APP_BACKEND_DOMAIN
 
 
 export const getCouplesByReference = async (referenceId: string) => {
-  const response = await fetch(`https://backend-lovelink.vercel.app/couples-template-info/${referenceId}/`);
+  const response = await fetch(`${backendDomain}/couples-template-info/${referenceId}/`);
   if (!response.ok) {
     throw new Error(`Error fetching data: ${response.statusText}`);
   }
