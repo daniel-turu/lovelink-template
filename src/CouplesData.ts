@@ -71,8 +71,8 @@ export const getCouples = (): Couplesdata => {
         couplesImageTog3: "/images/couples/4.jpg",
 
         celebration: [
-            { type: "Wedding Ceremony", address: "Saturday, 17th December, 2022, 10.00 AM ECWA Goodnews Church U/K, Television, Kaduna" },
-            { type: "Reception Party", address: "Saturday, 17th December, 2022, 10.00 AM Time: Immediately after [Ceremony] ECWA Goodnews Church U/K, Television, Kaduna" }
+            { type: "Wedding Ceremony", address: "2 - February - 2025, 10.00 AM ECWA Goodnews Church U/K, Television, Kaduna" },
+            { type: "Reception Party", address: "2 - February - 2025, 10.00 AM Time: Immediately after [Ceremony] ECWA Goodnews Church U/K, Television, Kaduna" }
         ],
 
         bridesMaid: [
