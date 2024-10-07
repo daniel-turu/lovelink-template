@@ -4,6 +4,7 @@ import Template1 from './Templates/template1';
 import { ColorProvider } from './Components/ColorRoute';
 import Template2 from './Templates/template2';
 import { CouplesProvider } from './Components/CouplesProvider';
+import Card1 from './weddingivcards/Cards/General/Card1';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/template1" element={<Template1 />} />
             <Route path="/couplesdream" element={<Template2 />} />
+            <Route path="/card1" element={<Card1 />} />
           </Routes>
         </ColorProvider>
       </CouplesProvider>

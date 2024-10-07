@@ -65,7 +65,7 @@ export const getCouples = (): Couplesdata => {
         groomLoveStory: "It was a rainy afternoon in Lagos when fate brought Emily into my life. Seeking refuge from the rain 🌧️, I stepped into a cozy café, only to find her sitting at the table next to mine. Her presence was captivating, and I couldn't resist smiling at her 😊. We started talking about the book I was reading, and I was pleasantly surprised to discover our shared passion for literature 📚. The rain outside set the perfect mood for our conversation, and time seemed to stand still as we exchanged stories and laughter 😂. A week later, I invited Emily to a book reading event 📖. As we listened to the author's words, I felt an undeniable connection between us. Her intelligence and warmth drew me in, and I knew I wanted to spend more time with her. Our coffee dates soon became a cherished routine ☕. Each meeting deepened my feelings for her, and Emily's genuine nature made me fall in love with her more each day. One evening, as we strolled through a park 🌳, I mustered the courage to hold her hand and confess my feelings. To my delight, she felt the same way 💓. Our relationship blossomed like a flower 🌸, growing stronger with every shared moment. Emily's love and support have become my foundation, and I can't imagine my life without her. With each passing day, our bond deepens, and I look forward to a future filled with love and happiness by her side 🌟.",
         groomImage: "/images/couples/17.jpg",
 
-        weddingDate: "2024-09-07T16:59:00",
+        weddingDate: "2025-02-02T16:59:00",
         couplesImageTog1: "/images/couples/9.jpg",
         couplesImageTog2: "/images/couples/3.jpg",
         couplesImageTog3: "/images/couples/4.jpg",
