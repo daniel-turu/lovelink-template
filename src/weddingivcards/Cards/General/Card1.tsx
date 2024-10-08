@@ -49,7 +49,7 @@ function Card1() {
 
           {/* Card content */}
           <div className='z-10'>
-            <div className='font-adinekirnberg text-5xl pb-6'>Wedding Reception</div>
+            <div className='font-adinekirnberg text-5xl pb-6'>Wedding Invetation</div>
             <div className='w-[250px] pb-6 text-sm'>
               We invite your pleasure to come to the wedding reception ceremony of
             </div>
