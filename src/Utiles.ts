@@ -62,3 +62,33 @@ export const getCouplesByReference = async (referenceId: string) => {
   return data; // Return the parsed data
 };
 
+
+
+interface WeddingDateFormat {
+  dayOfWeek: string;
+  day: number;
+  month: string;
+  time: string;
+}
+// Function to format the wedding date
+export const formatWeddingDate = (weddingDate: string): WeddingDateFormat => {
+  const date = new Date(weddingDate);
+
+  // Get day of the week (e.g., "Saturday")
+  const dayOfWeek = date.toLocaleDateString('en-US', { weekday: 'long' });
+
+  // Get day of the month (e.g., "26")
+  const day = date.getDate();
+
+  // Get month name (e.g., "January")
+  const month = date.toLocaleDateString('en-US', { month: 'long' });
+
+  // Get time in "HH:MM AM/PM" format
+  const time = date.toLocaleTimeString('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true,
+  });
+
+  return { dayOfWeek, day, month, time };
+}

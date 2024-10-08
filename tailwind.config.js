@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mistletoe: ['Christmas', 'sans-serif'],
+        mistletoe: ['christmas', 'sans-serif'],
+        adinekirnberg: ['AdineKirnberg'],
+        arimo: ['Arimo'],
       },
     },
   },

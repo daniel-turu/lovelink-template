@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.f9017677.css",
-    "main.js": "/static/js/main.75c5c2ed.js",
+    "main.css": "/static/css/main.3d67cb03.css",
+    "main.js": "/static/js/main.862986ec.js",
     "static/js/453.6538ad9b.chunk.js": "/static/js/453.6538ad9b.chunk.js",
+    "static/media/arimo.regular.ttf": "/static/media/arimo.regular.5337f762a1dff65151ee.ttf",
     "static/media/ChristmasSparkle-Regular.ttf": "/static/media/ChristmasSparkle-Regular.69a0f82469f825422b76.ttf",
+    "static/media/adine-kirnberg.regular.ttf": "/static/media/adine-kirnberg.regular.3b12be67cb2b98a1477b.ttf",
     "static/media/lg.svg?io9a6k": "/static/media/lg.09cd8e9be7081f216644.svg",
     "static/media/lg.woff?io9a6k": "/static/media/lg.356a0e9cb064c7a196c6.woff",
     "static/media/lg.ttf?io9a6k": "/static/media/lg.747d038541bfc6bb8ea9.ttf",
     "static/media/lg.woff2?io9a6k": "/static/media/lg.64b800aa30714fd916dc.woff2",
     "index.html": "/index.html",
-    "main.f9017677.css.map": "/static/css/main.f9017677.css.map",
-    "main.75c5c2ed.js.map": "/static/js/main.75c5c2ed.js.map",
+    "main.3d67cb03.css.map": "/static/css/main.3d67cb03.css.map",
+    "main.862986ec.js.map": "/static/js/main.862986ec.js.map",
     "453.6538ad9b.chunk.js.map": "/static/js/453.6538ad9b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9017677.css",
-    "static/js/main.75c5c2ed.js"
+    "static/css/main.3d67cb03.css",
+    "static/js/main.862986ec.js"
   ]
 }
