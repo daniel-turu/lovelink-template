@@ -25,9 +25,8 @@ function Card1() {
     <div className='w-full'>
       <div className='bg-[#F6F7F8] h-[100vh] flex flex-col items-center justify-center'>
         <div
-          className={`relative overflow-hidden h-[100vh] w-[350px] bg-white flex flex-col justify-center items-center text-center transform transition-all duration-1000 ease-out ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`relative overflow-hidden h-[100vh] w-[350px] bg-white flex flex-col justify-center items-center text-center transform transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
           {/* Decorative background images */}
           <div
@@ -69,7 +68,16 @@ function Card1() {
               </div>
             </div>
 
-            <div> 123 Anywhere St., Any City, <br /> ST 12345 </div>
+            <div>
+              {/* Check if celebration exists and has at least one item */}
+              {Couples.celebration && Couples.celebration.length > 0 && Couples.celebration[0].address ? (
+                <div>
+                  {Couples.celebration[0].address}
+                </div>
+              ) : (
+                <div>  </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
