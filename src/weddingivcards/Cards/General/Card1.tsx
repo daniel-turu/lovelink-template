@@ -68,7 +68,7 @@ function Card1() {
               </div>
             </div>
 
-            <div>
+            <div className='w-[17rem]'>
               {/* Check if celebration exists and has at least one item */}
               {Couples.celebration && Couples.celebration.length > 0 && Couples.celebration[0].address ? (
                 <div>
