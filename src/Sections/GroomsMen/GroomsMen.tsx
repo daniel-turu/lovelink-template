@@ -19,7 +19,7 @@ export const GroomsMen = () => {
             
             {couples.groomsMen?
              <div className='container my-10 text-center'>
-             <h1 className='text-3xl font-mistletoe tracking-wider'>Brides Maid</h1>
+             <h1 className='text-3xl font-mistletoe tracking-wider'>Grooms men</h1>
 
              <div className='flex flex-wrap justify-center my-6 space-x-4'>
                  {groomsMen.map((groomsmen, index) => (
