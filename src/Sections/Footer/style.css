@@ -1,0 +1,58 @@
+/* Style for the heart shape itself */
+.heart-shape {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .heart-shape::before,
+  .heart-shape::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 200px;
+    border-radius: 120px 120px 0 0;
+    background-color: inherit;
+  }
+  
+  .heart-shape::before {
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 0;
+  }
+  
+  .heart-shape::after {
+    transform: rotate(45deg);
+    right: 50%;
+    top: 0;
+  }
+  
+  /* Style for the animated "ping" effect around the heart */
+  .heart-ping {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    top: -20px;
+    left: -20px;
+    animation: ping 1.5s infinite;
+  }
+  
+  @keyframes ping {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    75% {
+      transform: scale(1.3);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.4);
+      opacity: 0;
+    }
+  }
+  

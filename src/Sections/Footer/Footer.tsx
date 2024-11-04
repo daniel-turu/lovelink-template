@@ -32,7 +32,7 @@ export const Footer = () => {
                         <div className='relative rounded-full w-[240px] h-[240px] sm:w-[400px] sm:h-[400px]  flex flex-col items-center justify-center text-white'
                             style={{ backgroundColor: transparentColor }}
                         >
-                            <div className='font-bold text-2xl sm:text-4xl sm:mb-4 font-mistletoe tracking-wider'>Wilson & Deborah</div>
+                            <div className='font-bold text-2xl sm:text-4xl sm:mb-4 font-mistletoe tracking-wider'> {couples.groomName} & {couples.brideName}</div>
                             <div className='font-extrabold text-3xl sm:text-6xl sm:mb-4 text-center font-mistletoe tracking-wider'>Forever</div>
                             <div className='font-bold sm:font-normal sm:text-2xl'>Thank you</div>
                         </div>

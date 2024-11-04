@@ -20,6 +20,7 @@ export type Images = {
     category: string;
 }
 export type Couplesdata = {
+    weddingCard: string;
     weddingDate: string;
     weddingColor: Color;
     couplesImageTog1?: string;
@@ -51,7 +52,8 @@ export type Couplesdata = {
 export const getCouples = (): Couplesdata => {
     // Placeholder implementation. You can update this to fetch actual data based on the key.
     return {
-        weddingColor: { BgColor:"#85aaba", TextColor:"#ffffff"},
+        weddingCard: '/images/tools/imagecard.jpg',
+        weddingColor: { BgColor:"#925123", TextColor:""},
         brideName: "Emily",
         brideFullname: "Emily Davis Ogunleye",
 
@@ -227,7 +229,8 @@ export const getCouples = (): Couplesdata => {
 
 
 export const getEmptyCouples = (): Couplesdata => {
-  return {
+  return {  
+      weddingCard: '',
       weddingColor: { BgColor:"", TextColor:""},
       brideName: "",
       brideFullname: "",

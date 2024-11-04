@@ -54,11 +54,14 @@ const backendDomain = process.env.REACT_APP_BACKEND_DOMAIN
 
 export const getCouplesByReference = async (referenceId: string) => {
   const response = await fetch(`${backendDomain}/couples-template-info/${referenceId}/`);
+  
   if (!response.ok) {
     throw new Error(`Error fetching data: ${response.statusText}`);
   }
 
   const data = await response.json(); // Parse the response as JSON
+  console.log(data,"aaaaaaaaaaaaaaaaaaSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
+
   return data; // Return the parsed data
 };
 

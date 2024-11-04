@@ -7,8 +7,9 @@ import { BridesMaid } from '../Sections/BridesMaid/BridesMaid';
 import { Location } from '../Sections/Location/Location';
 import { GroomsMen } from '../Sections/GroomsMen/GroomsMen';
 import { WeddingGallery } from '../Sections/WeddingGallery/WeddingGallery';
-import { Footer } from '../Sections/Footer/Footer';
 import { WFooter } from '../Components/WaterMark/WFooter';
+import ImageCard from '../weddingivcards/Cards/General/ImageCard';
+import { Footer1 } from '../Sections/Footer/Footer1';
 
 
 function Template2() {
@@ -16,14 +17,14 @@ function Template2() {
   return (
     <div className="">
       <Nav />
-      {/* <Hero /> */}
+      <ImageCard />
       <Couples />
       <CountDown />
       <Location />
       {/* <BridesMaid /> */}
       {/* <GroomsMen /> */}
       <WeddingGallery />
-      <Footer />
+      <Footer1 />
       <WFooter />
 
     </div>
