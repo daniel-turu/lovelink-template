@@ -52,7 +52,7 @@ export type Couplesdata = {
 export const getCouples = (): Couplesdata => {
     // Placeholder implementation. You can update this to fetch actual data based on the key.
     return {
-        weddingCard: '/images/tools/imagecard.jpg',
+        weddingCard: '/images/tools/imagecard.jpeg',
         weddingColor: { BgColor:"#925123", TextColor:""},
         brideName: "Emily",
         brideFullname: "Emily Davis Ogunleye",
