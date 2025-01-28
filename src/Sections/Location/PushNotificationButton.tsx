@@ -10,7 +10,7 @@ const PushNotificationButton: React.FC<PushNotificationButtonProps> = ({ interes
   const handleButtonClick = () => {
     setLoading(true);
 
-    // Send message to parent when button is clicked
+    // Send message to parent when button is clicked (the parent is the main frontend app)
     window.parent.postMessage("buttonClickedInIframe", "*");
 
     setLoading(false);
@@ -23,7 +23,7 @@ const PushNotificationButton: React.FC<PushNotificationButtonProps> = ({ interes
         className="px-6 py-3 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white rounded-full shadow-md hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-pink-300"
         disabled={loading}
       >
-        {loading ? 'Sending...' : 'Subscribe to Notifications'}
+        {loading ? 'Sending...' : 'Wedding Reminder'}
       </button>
     </div>
   );
