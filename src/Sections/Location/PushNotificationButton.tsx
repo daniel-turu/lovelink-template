@@ -14,7 +14,7 @@ interface PushNotificationButtonProps {
 
     beamsClient
       .start()
-      .then(() => beamsClient.addDeviceInterest('hello'))
+      .then(() => beamsClient.addDeviceInterest(interest))
       .then(() => console.log('Successfully registered and subscribed!'))
       .catch(console.error);
   };
