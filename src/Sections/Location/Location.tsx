@@ -1,11 +1,14 @@
 import React from 'react'
 import { useColors } from '../../Components/ColorRoute';
 import { useCouples } from '../../Components/CouplesProvider';
+import PushNotificationButton from './PushNotificationButton';
 
 export const Location = () => {
     const couples = useCouples();
     const celebrations = couples.celebration || []; // Ensure celebration is defined and is an array
     const { bgColor, textColor } = useColors();
+
+    let reference = localStorage.getItem('reference') || '';
 
     // If the celebrations array is empty, return nothing (null)
     if (celebrations.length === 0) {
@@ -34,6 +37,8 @@ export const Location = () => {
                         </div>
                     ))}
                 </div>
+
+                <PushNotificationButton interest={reference} />
             </div>
         </div>
     )

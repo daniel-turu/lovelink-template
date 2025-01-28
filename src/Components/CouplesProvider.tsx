@@ -2,6 +2,7 @@ import React, { createContext, useContext, ReactNode, useState, useEffect } from
 import { useLocation } from 'react-router-dom';
 import { Couplesdata, getCouples, getEmptyCouples } from '../CouplesData';
 import { getCouplesByReference } from '../Utiles';
+import Loading from './Loading';
 
 // Create the context
 const CouplesContext = createContext<Couplesdata | null>(null);
@@ -34,6 +35,7 @@ export function CouplesProvider({ children }: { children: ReactNode }) {
           
           if (data) {
             setCouplesData(data);
+            localStorage.setItem('reference', reference); // Save referenceId to local storage 
           }
         } catch (error) {
           console.error('Error fetching couples data by referenceId:', error);
@@ -49,7 +51,7 @@ export function CouplesProvider({ children }: { children: ReactNode }) {
 
   // Show loader if loading
   if (loading) {
-    return <div>Loading...</div>; // Replace with your loader component or animation
+    return <Loading />; // Replace with your loader component or animation
   }
 
   return (

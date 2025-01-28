@@ -7,7 +7,6 @@ import { CouplesProvider } from './Components/CouplesProvider';
 import Card1 from './weddingivcards/Cards/General/Card1';
 import ImageCard from './weddingivcards/Cards/General/ImageCard';
 
-
 function App() {
 
   // Note the path must be the same with LovelinkTempInfo.ts >> lovelinkTemp && tempName
@@ -25,7 +24,6 @@ function App() {
         </ColorProvider>
       </CouplesProvider>
     </Router>
-
   );
 }
 

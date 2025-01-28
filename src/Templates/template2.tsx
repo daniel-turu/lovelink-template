@@ -18,6 +18,7 @@ function Template2() {
     <div className="">
       <Nav />
       <ImageCard />
+       <Hero />
       <Couples />
       <CountDown />
       <Location />
