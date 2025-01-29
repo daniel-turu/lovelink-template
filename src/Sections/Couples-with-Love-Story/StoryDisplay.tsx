@@ -5,52 +5,30 @@ interface StoryDisplayProps {
 }
 
 export default function StoryDisplay({ story }: StoryDisplayProps) {
-  const [formattedStory, setFormattedStory] = useState<string[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [formattedStory, setFormattedStory] = useState<string>(story);
 
-  // AI-powered formatting function
-  const formatStory = async (text: string): Promise<string[]> => {
-    setLoading(true);
-
-    // Simulated AI detected keywords
-    const importantWords = ["warrior", "battle", "legend", "mystical", "courage", "kingdom", "shadow", "fearless"];
-    const regex = new RegExp(`\\b(${importantWords.join("|")})\\b`, "gi");
-
-    // Bold important words
-    let highlightedText = text.replace(regex, "<strong>$1</strong>");
-
-    // Break text into paragraphs at full stops (.), exclamations (!), or question marks (?)
-    const paragraphs = highlightedText
-      .split(/([.!?])\s+/)
-      .reduce((acc: string[], curr: string, i, arr) => {
-        if (curr.match(/[.!?]/)) {
-          acc[acc.length - 1] += curr; // Append punctuation to previous sentence
-        } else {
-          acc.push(curr);
-        }
-        return acc;
-      }, [])
-      .filter((p) => p.length > 0); // Remove empty segments
-
-    setLoading(false);
-    return paragraphs;
+  // Enhanced Markdown-like formatting
+  const formatMarkdown = (text: string): string => {
+    return text
+      .replace(/^# (.*$)/gm, "<b>$1</b>") // Bold
+      .replace(/^## (.*$)/gm, "<b>$1</b>") // Bold
+      .replace(/^### (.*$)/gm, "<b>$1</b>") // Bold
+      .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") // Bold (**word**)
+      .replace(/\*(.*?)\*/g, "<em>$1</em>") // Italic (*word*)
+      .replace(/\~\~(.*?)\~\~/g, "<del>$1</del>") // Strikethrough (~~word~~)
+      .replace(/\n/g, "<br>") // Line breaks
+      .replace(/\-\-\-/g, "<hr>") // Horizontal line
+      .replace(/^> (.*$)/gm, "<blockquote>$1</blockquote>") // Blockquote
+      .replace(/\n\n/g, "<p></p>"); // Paragraph spacing
   };
 
   useEffect(() => {
-    formatStory(story).then(setFormattedStory);
+    setFormattedStory(formatMarkdown(story));
   }, [story]);
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-xl transition-all duration-300">
-      {/* <h1 className="text-4xl font-extrabold text-gray-800 mb-4 text-center">📖 Your Story</h1> */}
-
-      {loading ? (
-        <p className="text-gray-500 text-center animate-pulse">✨ Formatting your story...</p>
-      ) : (
-        formattedStory.map((paragraph, index) => (
-          <p key={index} className="text-lg text-gray-700 leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: paragraph }} />
-        ))
-      )}
+    <div className="max-w py-2 my-2">
+      <p className="text-lg text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: formattedStory }} />
     </div>
   );
 }
