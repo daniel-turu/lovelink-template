@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './style.css'; // Make sure this path is correct for where your CSS file is located
 import { SqureHvImage } from '../../Components/SqureHvImage';
 import { useColors } from '../../Components/ColorRoute';
+import StoryDisplay from './StoryDisplay';
 
 interface LoveStoryDialogProps { story: string; img: string }
 
@@ -19,7 +20,8 @@ export const LoveStoryDialog: React.FC<LoveStoryDialogProps> = ({story, img}) =>
 
     return (
         <div>
-            <button
+            <div className='text-center'>
+                <button
                 data-ripple-light="true"
                 onClick={openDialog}
                 className="select-none rounded-lg bg-gradient-to-tr italic underline py-3 px-6 text-center align-middle font-sans text-xs font-bold  shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
@@ -28,6 +30,9 @@ export const LoveStoryDialog: React.FC<LoveStoryDialogProps> = ({story, img}) =>
             >
                 Read More
             </button>
+            </div>
+            
+
             {isDialogOpen && (
                 <div
                     data-dialog-backdrop="dialog"
@@ -40,13 +45,11 @@ export const LoveStoryDialog: React.FC<LoveStoryDialogProps> = ({story, img}) =>
                         className="relative m-4 w-[90%] sm:min-w-[40%] sm:max-w-[40%] rounded-lg bg-white font-sans text-base font-light leading-relaxed text-blue-gray-500 antialiased shadow-2xl animate-bounce-in"
                     >
 
-                        <div className="overflow-y-auto relative  justify-center items-center p-4 font-sans text-base antialiased font-light leading-relaxed border-t border-b border-t-blue-gray-100 border-b-blue-gray-100 text-blue-gray-500" style={{ maxHeight: 'calc(100vh - 100px)' }}>
+                        <div className="overflow-y-auto relative p-4 font-sans text-lg antialiased font-light leading-relaxed border-t border-b border-t-blue-gray-100 border-b-blue-gray-100 text-blue-gray-500" style={{ maxHeight: 'calc(100vh - 100px)' }}>
                             <div className='flex justify-center'>
                                 <SqureHvImage cicle_wh={250} backgroundImageUrl={img} />
                             </div>
-                            <p className='text-center pt-3'>
-                                {story}                            
-                            </p>
+                            <StoryDisplay story={story} />
                         </div>
                         <div className="flex justify-center items-center p-4 shrink-0 text-blue-gray-500">
                             <button
