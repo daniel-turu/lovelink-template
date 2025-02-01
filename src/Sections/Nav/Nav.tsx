@@ -47,7 +47,7 @@ export const Nav = () => {
             >
                 <div className='flex-1 h-full flex items-center'>
                     <div className='ml-6 font-mistletoe text-xl font-bold tracking-wider'>
-                        {couples.brideName} & {couples.groomName}
+                        {couples.groomName} & {couples.brideName}
                     </div>
                 </div>
                 <div className='flex justify-center w-[100px]'>

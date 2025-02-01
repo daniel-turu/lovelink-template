@@ -17,22 +17,7 @@ export const Couples = () => {
                 <h1 className='text-center text-3xl font-mistletoe'>Happy Couple</h1>
 
                 <div className='sm:flex justify-center'>
-                    <div className='flex flex-col items-center mt-10'>
-                        <RoundImage cicle_wh={250} backgroundImageUrl={couples.brideImage} />
-                        <h3 className='text-center text-xl font-mistletoe pt-3'>{couples.brideFullname}</h3>
-                        
-                        {couples.brideLoveStoryTilte ? <div className='underline mt-3'>{couples.brideLoveStoryTilte}</div>:""}
-                     
-                        
-                        {couples.brideLoveStory ?
-                            <p className='text-center w-4/5'>
-                                {truncateText(couples.brideLoveStory, 328)}
-                                <br />
-                                <LoveStoryDialog story={couples.brideLoveStory} img={couples.brideImage} />
-                            </p> : ""
-                        }
-
-                    </div>
+                    
                     <div className='flex flex-col items-center mt-10'>
                         <RoundImage cicle_wh={250} backgroundImageUrl={couples.groomImage} />
                         <h3 className='text-center text-xl font-mistletoe pt-3'>{couples.groomFullname}</h3>
@@ -45,6 +30,23 @@ export const Couples = () => {
                             </p> : ""
                         }
                     </div>
+                    
+                    
+                    <div className='flex flex-col items-center mt-10'>
+                        <RoundImage cicle_wh={250} backgroundImageUrl={couples.brideImage} />
+                        <h3 className='text-center text-xl font-mistletoe pt-3'>{couples.brideFullname}</h3>
+                        
+                        {couples.brideLoveStoryTilte ? <div className='underline mt-3'>{couples.brideLoveStoryTilte}</div>:""}
+                        {couples.brideLoveStory ?
+                            <p className='text-center w-4/5'>
+                                {truncateText(couples.brideLoveStory, 328)}
+                                <br />
+                                <LoveStoryDialog story={couples.brideLoveStory} img={couples.brideImage} />
+                            </p> : ""
+                        }
+
+                    </div>
+
                 </div>
             </div>
         </div>
