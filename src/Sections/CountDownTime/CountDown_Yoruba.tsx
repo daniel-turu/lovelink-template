@@ -4,11 +4,20 @@ import { useColors } from "../../Components/ColorRoute";
 import { motion, AnimatePresence, MotionValue } from "framer-motion";
 import { JSX } from 'react/jsx-runtime';
 
+type TimeLeft = {
+    Days: number;
+    Hours: number;
+    Minutes: number;
+    Seconds: number;
+    [key: string]: number; // allows indexing with strings
+};
+
+
 export const CountDown_Yoruba = () => {
     const couplesData = useCouples();
     const { bgColor, textColor } = useColors();
     const weddingDate = new Date(couplesData.weddingDate);
-    
+
     type TimeLeft = {
         Days: number;
         Hours: number;
@@ -49,13 +58,15 @@ export const CountDown_Yoruba = () => {
 
     const timerComponents: React.ReactNode[] = [];
 
-    Object.keys(timeLeft).forEach((interval) => {
+    (Object.keys(timeLeft) as (keyof TimeLeft)[]).forEach((interval) => {
         timerComponents.push(
             <span key={interval}>
                 {timeLeft[interval]} {interval}{" "}
             </span>
         );
     });
+
+
 
     return (
         <div className="bg-[#00000083] w-full h-full p-10 rounded-lg flex flex-col items-center justify-center text-center" style={{ backgroundImage: `url(${couplesData.couplesImageTog1})`, color: textColor, background: bgColor }}>

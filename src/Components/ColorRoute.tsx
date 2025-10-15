@@ -1,6 +1,6 @@
 import React, { createContext, useContext, ReactNode, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { getContrastColor, couplesInviteTemp } from '../couplesInviteTempInfo';
+import { couplesInviteTemp, getContrastColor,  } from '../couplesInviteTemp';
 import { useCouples } from './CouplesProvider'; // Import the custom hook to access CouplesContext
 
 // Create a context to hold both background and text colors
