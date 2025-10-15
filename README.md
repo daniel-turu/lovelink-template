@@ -1,5 +1,5 @@
-# Lovelink Templates App
-Lovelink templates project for creating all the templates needed for the project
+# CouplesInvite Templates App
+CouplesInvite templates project for creating all the templates needed for the project
 
 ## Tools React | express
 

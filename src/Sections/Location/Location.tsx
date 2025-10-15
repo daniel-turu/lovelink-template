@@ -1,7 +1,6 @@
 import React from 'react'
 import { useColors } from '../../Components/ColorRoute';
 import { useCouples } from '../../Components/CouplesProvider';
-import PushNotificationButton from './PushNotificationButton';
 
 export const Location = () => {
     const couples = useCouples();
@@ -38,7 +37,6 @@ export const Location = () => {
                     ))}
                 </div>
 
-                <PushNotificationButton interest={reference} />
             </div>
         </div>
     )

@@ -6,7 +6,6 @@ function ImageCard() {
     const Couples = useCouples();
     const bg =Couples.weddingCard;
 
-    console.log(bg,"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
     
     // State to control animation visibility
     const [isVisible, setIsVisible] = useState(false);

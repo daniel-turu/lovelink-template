@@ -23,7 +23,7 @@ export const getContrastColor = (bgColor: string): string => {
 };
 
 // Note TempInfo and tempName must be thesame
-export const lovelinkTemp: { [key: string]: TempInfo } = {
+export const couplesInviteTemp: { [key: string]: TempInfo } = {
     template1: { tempName: 'template1', bgColor: '#85aaba', textColor: getContrastColor('#85aaba'), description: "This is the first template design" },
     couplesdream: { tempName: 'couplesdream', bgColor: '#38c172', textColor: getContrastColor('#38c172'), description: '' },
 };

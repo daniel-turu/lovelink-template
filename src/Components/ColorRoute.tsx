@@ -1,6 +1,6 @@
 import React, { createContext, useContext, ReactNode, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { getContrastColor, lovelinkTemp } from '../LovelinkTempInfo';
+import { getContrastColor, couplesInviteTemp } from '../couplesInviteTempInfo';
 import { useCouples } from './CouplesProvider'; // Import the custom hook to access CouplesContext
 
 // Create a context to hold both background and text colors
@@ -42,7 +42,7 @@ export function ColorProvider({ children }: { children: ReactNode }) {
   const urlTextColor = queryParams.get('textcolor') || getContrastColor(urlBgColor || '');
 
   // Get temp information and fallback to CouplesContext colors
-  const TempInfo = lovelinkTemp[tempName] || {};
+  const TempInfo = couplesInviteTemp[tempName] || {};
   const BgColor =  urlBgColor || couplesData?.weddingColor?.BgColor || TempInfo.bgColor ||  '#fff';
   const TextColor =  urlTextColor || couplesData?.weddingColor?.TextColor || TempInfo.textColor ||  '#000';
 

@@ -9,14 +9,14 @@ import { GroomsMen } from '../Sections/GroomsMen/GroomsMen';
 import { WeddingGallery } from '../Sections/WeddingGallery/WeddingGallery';
 import { Footer } from '../Sections/Footer/Footer';
 import { WFooter } from '../Components/WaterMark/WFooter';
-import Card1 from '../weddingivcards/Cards/General/Card1';
+import ImageCard from '../weddingivcards/Cards/General/ImageCard';
 
 function Template1() {
 
   return (
     <div className="">
       <Nav />
-      <Card1 />
+      <ImageCard />
       <Hero />
       <Couples />
       <CountDown />

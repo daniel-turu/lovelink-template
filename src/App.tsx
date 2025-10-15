@@ -6,10 +6,11 @@ import Template2 from './Templates/template2';
 import { CouplesProvider } from './Components/CouplesProvider';
 import Card1 from './weddingivcards/Cards/General/Card1';
 import ImageCard from './weddingivcards/Cards/General/ImageCard';
+import YorubaWeddingTemplate from './Templates/YorubaTemplate';
 
 function App() {
 
-  // Note the path must be the same with LovelinkTempInfo.ts >> lovelinkTemp && tempName
+  // Note the path must be the same with CouplesInviteTempInfo.ts >> CouplesInviteTemp && tempName
 
   return (
     <Router>
@@ -20,6 +21,7 @@ function App() {
             <Route path="/couplesdream" element={<Template2 />} />
             <Route path="/card1" element={<Card1 />} />
             <Route path="/imagedcard" element={<ImageCard />} />
+            <Route path="/yorubawedding" element={<YorubaWeddingTemplate />} />
           </Routes>
         </ColorProvider>
       </CouplesProvider>

@@ -6,7 +6,7 @@ export const WFooter = () => {
             <p className='px-2'>Design by </p>
             <a href="https://lovelink-web.vercel.app" target="_blank" rel="noreferrer" className='flex justify-center' >
                 <img src="/logo.svg" width={25} alt="df" srcSet="" />
-                <span className='text-[#FF6600] px-1'>Lovelink</span>
+                <span className='text-[#FF6600] px-1'>CouplesInvite</span>
             </a>
         </div>
     )
