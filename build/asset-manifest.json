@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ab95e2af.css",
-    "main.js": "/static/js/main.8515921c.js",
+    "main.css": "/static/css/main.ce25f6c9.css",
+    "main.js": "/static/js/main.5c319292.js",
     "static/js/453.6538ad9b.chunk.js": "/static/js/453.6538ad9b.chunk.js",
     "static/media/arimo.regular.ttf": "/static/media/arimo.regular.5337f762a1dff65151ee.ttf",
     "static/media/ChristmasSparkle-Regular.ttf": "/static/media/ChristmasSparkle-Regular.69a0f82469f825422b76.ttf",
@@ -11,12 +11,12 @@
     "static/media/lg.ttf?io9a6k": "/static/media/lg.747d038541bfc6bb8ea9.ttf",
     "static/media/lg.woff2?io9a6k": "/static/media/lg.64b800aa30714fd916dc.woff2",
     "index.html": "/index.html",
-    "main.ab95e2af.css.map": "/static/css/main.ab95e2af.css.map",
-    "main.8515921c.js.map": "/static/js/main.8515921c.js.map",
+    "main.ce25f6c9.css.map": "/static/css/main.ce25f6c9.css.map",
+    "main.5c319292.js.map": "/static/js/main.5c319292.js.map",
     "453.6538ad9b.chunk.js.map": "/static/js/453.6538ad9b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab95e2af.css",
-    "static/js/main.8515921c.js"
+    "static/css/main.ce25f6c9.css",
+    "static/js/main.5c319292.js"
   ]
 }
